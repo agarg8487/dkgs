@@ -1,1 +1,10 @@
-create table rokad(currentDate Timestamp,name varchar(100) NOT NULL, amount bigint NOT NULL, type varchar(20) NOT NULL, remark text, carryDate date NOT NULL DEFAULT CURDATE());
+------------------
+create table rokad(currentDate Timestamp,idNUM int NOT NULL, amount bigint NOT NULL, type varchar(20) NOT NULL, remark text, carryDate date NOT NULL DEFAULT CURDATE(), PRIMARY KEY(idNUm));
+------------------
+create table holder (idNum int NOT NULL AUTO_INCREMENT, name varchar(100) NOT NULL, address text, phoneNum text, PRIMARY KEY(idNum));
+------------------
+alter  table holder auto_increment = 10000;
+------------------
+create table bankDetails(idNum int NOT NULL, bankName varchar(100) NOT NULL, accountNum varchar(50) NOT NULL, ifscCode varchar(15) NOT NULL, PRIMARY KEY(idNum));
+------------------
+create table rokadDeleted(currentDate Timestamp,idNUM int NOT NULL, amount bigint NOT NULL, type varchar(20) NOT NULL, remark text, carryDate date NOT NULL DEFAULT CURDATE(), PRIMARY KEY(idNUm));
