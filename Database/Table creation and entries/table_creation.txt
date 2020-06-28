@@ -1,0 +1,1 @@
+create table rokad(currentDate Timestamp,name varchar(100) NOT NULL, amount bigint NOT NULL, type varchar(20) NOT NULL, remark text, carryDate date NOT NULL DEFAULT CURDATE());
